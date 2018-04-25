@@ -1,0 +1,8 @@
+<div class="todo__status">
+    <div ng-if="$ctrl.total !== $ctrl.completed">
+        <strong>Status:</strong> total {{$ctrl.total}}, completed {{$ctrl.completed}}, still to do {{$ctrl.remain}} 
+    </div>
+    <div ng-if="$ctrl.total === $ctrl.completed" class="alert alert-success" role="alert">
+        <strong>Well done!</strong> There is nothing to do, take a break ;).
+    </div>
+</div>

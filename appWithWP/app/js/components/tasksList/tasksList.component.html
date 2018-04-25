@@ -1,0 +1,22 @@
+<div class="todo__item"
+     ng-repeat="todo in $ctrl.todoList track by $index">
+    <div class="input-group input-group-lg">
+        <div class="btnPlace form-inline col-xl-2 col-12">
+            <button class="btn btn-outline-dark btn-sm" 
+                    ng-click="$ctrl.completeTask(todo, $index)"
+                    ng-style="todo.taskStatus && {'background-color': '#000', 'color': '#fff'}">Complete</button>
+            <button class="btn btn-outline-danger btn-sm" ng-click="$ctrl.removeTask(todo, $index)">Remove</button>
+        </div>
+
+        <div class="taskPlace col-xl-10 col-12" task-editor>
+            <span ng-class="{completed: todo.taskStatus}" class="taskDescription">
+                {{todo.taskName}}
+            </span>
+            <input 
+                type="text" 
+                class="form-control" 
+                ng-model="todo.taskName"
+                ng-blur="$ctrl.updateTask(todo, $index)">
+        </div>
+    </div>
+</div>

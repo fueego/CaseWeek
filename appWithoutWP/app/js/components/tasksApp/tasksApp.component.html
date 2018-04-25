@@ -1,0 +1,26 @@
+<section class="todoApp">
+    <div class="container">
+        <div class="row">
+            <div class="todo col-12">
+                <add-task 
+                    todo-list="$ctrl.todoList"
+                    update-list="$ctrl.updateToDoList($event)">
+                </add-task>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="todo list col-12">
+                <tasks-list
+                    todo-list="$ctrl.todoList"
+                    update-list="$ctrl.updateToDoList($event)">
+                </tasks-list>
+
+                <tasks-report
+                    todo-list="$ctrl.todoList"
+                    update-list="$ctrl.updateToDoList($event)">
+                </tasks-report>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,81 @@
+$bgCol: #fcfcfc;
+$borderCol: #dddddd;
+
+.todoApp {
+
+    margin: 30px auto;
+    font-size: 0.8em;
+
+    .todo {
+        background-color: $bgCol;
+        border: 1px solid $borderCol;
+
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+
+        .todo__form {
+            margin: 15px auto;
+        } //todo__form
+
+        .todo__item {
+            margin: 0px 0px 15px 0px;
+
+            .btnPlace > .btn:last-child {
+                margin-left:5px;
+            }
+
+            input {
+                display: none;
+            }
+
+            span {
+                display: inline;
+                line-height: 30px;
+
+                &.completed {
+                   color: #78737F;
+                   text-decoration: line-through; 
+                }
+            }
+        }
+
+        .todo__status {
+            margin-top: 30px;
+            padding-top: 10px;
+            border-top: 1px solid $borderCol;
+        }
+    } //end todo
+
+    .list {
+        margin: 15px auto;
+        padding: 15px;
+    }
+} //end todoApp
+
+
+/* media queries for responsive design */
+@media (max-width: 1199.98px) {
+    .todo__addTaskBtn {
+        margin-top: 10px;
+        
+        & > .btn {
+            width: 100%;
+        }
+    }
+
+    .todo__item {
+        .taskPlace {
+            padding-top: 15px;
+            margin-bottom: 20px;
+        }
+
+        .btnPlace {
+            justify-content: space-between;
+    
+            .btn {
+                width: 49%;
+            }
+        }
+    }
+}

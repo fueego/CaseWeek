@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "angular": "^1.6.9",
+    "bootstrap": "^4.0.0",
+    "jquery": "3.2.1"
+  },
+  "devDependencies": {
+    "json-server": "^0.12.1",
+    "lite-server": "^2.3.0",
+    "node-sass": "^4.8.3"
+  },
+  "scripts": {
+    "serve": "lite-server",
+    "restApi": "json-server --watch db.json --port 4040"
+  }
+}
